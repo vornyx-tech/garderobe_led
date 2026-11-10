@@ -12,7 +12,6 @@ esp32:
   framework:
     type: esp-idf
 
-# ESP32-C3 SuperMini logs over its native USB port
 logger:
   hardware_uart: USB_SERIAL_JTAG
 
@@ -33,7 +32,6 @@ wifi:
 
 captive_portal:
 
-# PWM outputs driving the MOSFETs
 output:
   - platform: ledc
     id: pwm_clothes
@@ -45,7 +43,6 @@ output:
     pin: GPIO4
     frequency: 2000Hz
 
-# White LED strips: on/off + brightness only
 light:
   - platform: monochromatic
     id: light_clothes
